@@ -3,7 +3,7 @@ from django.db import models
 
 class CountryRegion(models.Model):
     country = models.CharField(max_length=30)
-    province_state = models.CharField(max_length=30, null=True, blank=True)
+    province_state = models.CharField(max_length=30, null=True, blank=True, unique=True)
     population = models.DecimalField(max_digits=8, decimal_places=2, null=True, blank=True)
 
 
