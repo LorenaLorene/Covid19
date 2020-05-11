@@ -13,4 +13,4 @@ class DailyStatistics(models.Model):
     deaths = models.IntegerField(null=True, blank=True)
     recovered = models.IntegerField(null=True, blank=True)
     active = models.IntegerField(null=True, blank=True)
-    country_region = models.OneToOneField(CountryRegion, on_delete=models.CASCADE, primary_key=True)
+    country_region = models.ForeignKey(CountryRegion, on_delete=models.CASCADE)
